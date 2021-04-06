@@ -1,0 +1,20 @@
+<p>awesome-calculator works!</p>
+
+
+  first number:
+  <input type="number" [(ngModel)]="firstNumber" >
+<!--<input type="number" [value]="firstNumber" (change)="onFirstChange($event.target.value)">-->
+
+<!--  <select  [(ngModel)]="operator" >-->
+  <select  [value]="operator" (change)="onOperatorChange($event.target.value)" >
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+
+  second number:
+  <input [(ngModel)]="secondNumber" type="number" >
+<!--<input type="number" [value]="secondNumber" (change)="onSecondChange($event.target.value)">-->
+<button (click)="calculate()">Calculate</button>
+<p>{{result}}</p>
